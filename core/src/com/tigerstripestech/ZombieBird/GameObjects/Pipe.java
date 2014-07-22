@@ -65,6 +65,11 @@ public class Pipe extends Scrollable {
         return false;
     }
 
+    public void onRestart(float x, float scrollSpeed) {
+        velocity.x = scrollSpeed;
+        reset(x);
+    }
+
     @Override
     public void reset(float newX) {
         // Call the reset method in the superclass (Scrollable)
